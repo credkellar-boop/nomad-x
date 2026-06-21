@@ -1,0 +1,17 @@
+{
+  "services": [
+    {
+      "id": "nomad-x-api-1",
+      "name": "nomad-x-api",
+      "tags": ["b2b", "fastapi", "production"],
+      "port": 8000,
+      "check": {
+        "id": "api-readiness",
+        "name": "HTTP API Readiness Probe",
+        "http": "http://localhost:8000/health/readiness",
+        "interval": "10s",
+        "timeout": "1s"
+      }
+    }
+  ]
+}
