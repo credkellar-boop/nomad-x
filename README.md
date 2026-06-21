@@ -1,2 +1,13 @@
-# nomad-x
-Nomad-X is a powerful cross-device language translation system engineered to eliminate global communication barriers. Featuring a unified Flutter frontend, it delivers a flawless user experience across mobile, web, and desktops. Backed by a high-performance Go API and orchestrated with HashiCorp Nomad, Nomad-X guarantees maximum global scalability.
+# Nomad-X System Documentation
+
+Nomad-X is a cross-device, high-performance workspace and translation engine. Built for ruthless business efficiency, it features a Flutter-based unified UI, a scalable FastAPI backend, and robust infrastructure orchestration via HashiCorp Nomad.
+
+## Architecture
+* **Frontend:** Flutter/Dart (Web, Desktop, Mobile)
+* **Backend:** Python/FastAPI (Engineered for multi-model AI routing)
+* **Infrastructure:** HashiCorp Nomad, Docker
+
+## Deployment
+Deploy the entire stack to your Nomad cluster:
+```bash
+nomad job run deploy/nomad-x.nomad
