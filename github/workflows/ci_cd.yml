@@ -1,0 +1,40 @@
+name: Nomad-X CI/CD Operational Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-validation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+    - name: Install Dependencies
+      run: |
+        cd api
+        pip install -r src/requirements.txt pytest
+    - name: Execute Pytest Suite
+      run: |
+        cd api
+        pytest
+
+  frontend-validation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.19.x'
+        channel: 'stable'
+    - name: Verify Dependencies & Testing Profiles
+      run: |
+        cd app
+        flutter pub get
+        flutter test
+        
