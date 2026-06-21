@@ -11,25 +11,33 @@ class TranslatorView extends StatefulWidget {
 class _TranslatorViewState extends State<TranslatorView> {
   final TextEditingController _inputController = TextEditingController();
   final ApiClient _apiClient = ApiClient();
-  
+
   String _translatedText = '';
   bool _isLoading = false;
 
   Future<void> _handleTranslation() async {
     if (_inputController.text.isEmpty) return;
 
-    setState(() => _isLoading = true);
-    
+    setState(() {
+      _isLoading = true;
+    });
+
     try {
-      final result = await _apiClient.translateText(
-        _inputController.text, 
-        'Spanish', // Defaulting for the stub
+      String finalResult = await _apiClient.translateText(
+        _inputController.text,
+        'Spanish',
       );
-      setState(() => _translatedText = result);
+      setState(() {
+        _translatedText = finalResult;
+      });
     } catch (e) {
-      setState(() => _translatedText = 'Error: $e');
+      setState(() {
+        _translatedText = 'Error: ${e.toString()}';
+      });
     } finally {
-      setState(() => _isLoading = false);
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
@@ -59,8 +67,8 @@ class _TranslatorViewState extends State<TranslatorView> {
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.all(16),
               ),
-              child: _isLoading 
-                  ? const CircularProgressIndicator() 
+              child: _isLoading
+                  ? const CircularProgressIndicator()
                   : const Text('Execute Translation'),
             ),
             const SizedBox(height: 24),
@@ -71,9 +79,11 @@ class _TranslatorViewState extends State<TranslatorView> {
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: Colors.white24),
               ),
-              minHeight: 100,
+              constraints: const BoxConstraints(minHeight: 100),
               child: Text(
-                _translatedText.isEmpty ? 'Output will appear here.' : _translatedText,
+                _translatedText.isEmpty
+                    ? 'Output will appear here.'
+                    : _translatedText,
                 style: const TextStyle(fontSize: 16),
               ),
             ),
