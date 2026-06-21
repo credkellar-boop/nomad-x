@@ -19,4 +19,3 @@ def test_translation_engine_routing():
     data = response.json()
     assert "translated" in data
     assert data["original"] == "System optimization mandatory"
-  
