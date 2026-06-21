@@ -1,5 +1,26 @@
 # Nomad-X
 
+### 🛡️ Infrastructure & Security Paradigms
+![Zero-Trust](https://img.shields.io/badge/Zero--Trust-Architecture-red?style=for-the-badge&logo=linux&logoColor=white)
+![Legal Defense](https://img.shields.io/badge/Automated-Legal_Defense-blueviolet?style=for-the-badge&logo=scale&logoColor=white)
+
+### 🕵️‍♂️ Cybersecurity & Offensive Auditing
+![Forensics](https://img.shields.io/badge/Forensics-Address_Clustering-black?style=for-the-badge&logo=kalilinux&logoColor=white)
+![OSINT](https://img.shields.io/badge/OSINT-Global_Identity-informational?style=for-the-badge&logo=tor&logoColor=white)
+
+### ⚙️ DevOps & Build Tools
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+### ☁️🧠 Hardware, Cloud & A.I. Stack
+![Gemini 2.5 Pro](https://img.shields.io/badge/Gemini_2.5_Pro-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+
+### 💻 Languages
+![Python 3.11](https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+
 ## About the Project
 Nomad-X is a full-stack software application designed with a dual-layer architecture. It separates the user-facing interface from the computational logic to ensure a fast, scalable experience.
 
